@@ -46,9 +46,9 @@ chown -R $apacheuser:$apachegroup "$apacheroot"
 ## Fix permissions
 # Directories
 echo "Fixing directory permissions..."
-find $apacheroot -type d | xargs chmod 2775
+find $apacheroot -type d | xargs -0 chmod 2775
 # Files
 echo "Fixing file permissions..."
-find $apacheroot -type f | xargs chmod 0664
+find $apacheroot -type f | xargs -0 chmod 0664
 
 echo "Done."
